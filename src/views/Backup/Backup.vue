@@ -3,7 +3,7 @@
 	<el-dialog :title="$t('common.backupRestore')" width="40%" :visible.sync="backupVisible" :close-on-click-modal="false" :modal=false>
         <el-table :data="tableData" style="width: 100%;font-size:16px;" height="330px" :show-header="showHeader"
             size="mini" v-loading="tableLoading" :element-tableLoading-text="$t('action.loading')">
-            <el-table-column prop="title" :label="$t('common.versionName')" header-align="center" align="center">  
+            <el-table-column prop="title" :label="$t('common.versionName')" header-align="center" align="center">
             </el-table-column>
             <el-table-column fixed="right" :label="$t('action.operation')" width="180">
                 <template slot-scope="scope">
@@ -28,7 +28,7 @@ export default {
             showHeader: false,
             backupVisible: false,
             tableLoading: false,
-            baseUrl: this.global.backupBaseUrl,
+            baseUrl: this.config.backupBaseUrl,
 		}
 	},
 	methods: {
